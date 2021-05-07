@@ -6,56 +6,48 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface StencilTorqButton {
         /**
-          * The first name
+          * The text to show inside the button
          */
-        "first": string;
+        "buttontext": string;
         /**
-          * The last name
+          * Could be a primary button, a secondary, etc
          */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "buttontype": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLStencilTorqButtonElement extends Components.StencilTorqButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLStencilTorqButtonElement: {
+        prototype: HTMLStencilTorqButtonElement;
+        new (): HTMLStencilTorqButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "stencil-torq-button": HTMLStencilTorqButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface StencilTorqButton {
         /**
-          * The first name
+          * The text to show inside the button
          */
-        "first"?: string;
+        "buttontext"?: string;
         /**
-          * The last name
+          * Could be a primary button, a secondary, etc
          */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "buttontype"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "stencil-torq-button": StencilTorqButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "stencil-torq-button": LocalJSX.StencilTorqButton & JSXBase.HTMLAttributes<HTMLStencilTorqButtonElement>;
         }
     }
 }

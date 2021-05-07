@@ -7,11 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description     | Type     | Default     |
-| -------- | --------- | --------------- | -------- | ----------- |
-| `first`  | `first`   | The first name  | `string` | `undefined` |
-| `last`   | `last`    | The last name   | `string` | `undefined` |
-| `middle` | `middle`  | The middle name | `string` | `undefined` |
+| Property     | Attribute    | Description                                 | Type     | Default     |
+| ------------ | ------------ | ------------------------------------------- | -------- | ----------- |
+| `buttontext` | `buttontext` | The text to show inside the button          | `string` | `undefined` |
+| `buttontype` | `buttontype` | Could be a primary button, a secondary, etc | `string` | `undefined` |
 
 
 ----------------------------------------------
